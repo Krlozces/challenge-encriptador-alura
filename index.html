@@ -7,8 +7,8 @@
         <meta name="description" content="El encriptador permite cifrar y descifrar mensajes utilizando una técnica de encriptación simple.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./styles/index.css">
-        <!--agregar favicon-->
         <link rel="shortcut icon" href="./images/OIG4.jfif" type="image/x-icon">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
         <header>
@@ -16,14 +16,14 @@
         <main>
             <section>
                 <section class="main-content">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                    <textarea name="text-to-encrypt" id="text-to-encrypt" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
                     <span class="important-message">
                         <img src="./images/Vector.png" alt="Importante" width="16px" height="16px">
                         Solo letras minúsculas y sin acentos
                     </span>
                 </section>
                 <section class="section-btns">
-                    <button type="button" class="btn-encriptar">
+                    <button type="button" class="btn-encriptar" id="encrypt-button">
                         Encriptar
                     </button>
                     <button type="button">
@@ -32,11 +32,11 @@
                 </section>
             </section>
             <section class="card-message">
-                <img src="./images/Muñeco.png" alt="muñeco">
-                <h2 class="subtitle">Ningún mensaje fue encontrado</h2>
-                <span class="text-encrypt"></span>
-                <p class="text-paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
-                <button class="btn-copy">Copiar</button>
+                <img src="./images/Muñeco.png" alt="muñeco" id="img-message" />
+                <h2 class="subtitle" id="subtitle-paragraph">Ningún mensaje fue encontrado</h2>
+                <input class="text-encrypt" id="encrypted-text" type="text" readonly />
+                <p class="text-paragraph" id="message-paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="btn-copy" id="btn-copy">Copiar</button>
             </section>
         </main>
         <footer>
