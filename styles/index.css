@@ -6,10 +6,49 @@
     padding: 0;
 }
 
+nav{
+    margin: 24px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dark{
+    background-color: #1A3636;
+    color: #fff;
+}
+
+.light{
+    background-color: #FEFEFE;
+}
+
+.navbar-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 6rem;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 1px solid #cdecde;
+    padding: 1rem 2rem;
+}
+
+.slash{
+    width: 4rem;
+    height: 1rem;
+    margin: 0 0.5rem;
+    transform: rotate(30deg);
+    border: 1px solid black;
+}
+
 body{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     text-align: center;
+}
+
+a{
+    text-decoration: none;
 }
 
 .btn-encriptar{
@@ -18,6 +57,7 @@ body{
 
 .btn-copy{
     display: none;
+    margin: 24px auto 0px auto;
 }
 
 .card-message{
@@ -25,6 +65,7 @@ body{
     width: auto;
     margin: 40px 24px;
     background-color: #fff;
+    color: #000;
     padding: 32px;
     -webkit-box-shadow: 24px 0px 32px -8px rgba(0,0,0,0.75);
     -moz-box-shadow: 24px 0px 32px -8px rgba(0,0,0,0.75);
@@ -85,6 +126,10 @@ textarea{
     margin: 0 16px;
     outline: none;
     padding: 1rem;
+}
+
+.encrypted-text{
+    display: none;
 }
 
 .footer-content{
