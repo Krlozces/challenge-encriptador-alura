@@ -29,6 +29,29 @@ let encrypt = (text) => {
     return encryptedText;
 }
 
+let desencrypt = (textEncrypted) => {
+    let decryptedText = textEncrypted.split('').map((letter) => {
+        for (let key in keys) {
+            if (keys[key] == letter) {
+                return keys[letter];
+            } else{
+                return letter;
+            }
+        }
+    }).join('');   
+    return decryptedText;
+}
+
+function copy() {
+    var copyText = encryptedText;
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied the text: " + copyText.value);
+}
+
+copyButton.addEventListener("click", () => copy());
+
 encryptButton.addEventListener("click", () => {
     let text = textArea.value;
     encryptedText.value = encrypt(text);
@@ -36,5 +59,10 @@ encryptButton.addEventListener("click", () => {
     subtitleParagraph.style.display = "none";
     imgMessage.style.display = "none";
     copyButton.style.display = "block";
-    
+});
+
+decryptButton.addEventListener("click", () => {
+    let textEncrypted = textArea.value;
+    encryptedText.value = desencrypt(textEncrypted);
+    console.log(encryptedText.value);
 });
