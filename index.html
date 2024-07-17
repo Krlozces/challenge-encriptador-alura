@@ -9,9 +9,18 @@
         <link rel="stylesheet" href="./styles/index.css">
         <link rel="shortcut icon" href="./images/OIG4.jfif" type="image/x-icon">
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
-    <body>
+    <body class="dark">
         <header>
+            <nav>
+                <h1>Encriptador / Desencriptador</h1>
+                <button class="navbar-btn" id="dark-mode">
+                    <i id="lightSolid" class="fa fa-regular fa-sun"></i>
+                    <div class="slash"></div>
+                    <i id="darkSolid" class="fa fa-solid fa-moon"></i>
+                </button>
+            </nav>
         </header>
         <main>
             <section>
@@ -32,9 +41,9 @@
                 </section>
             </section>
             <section class="card-message">
+                <textarea class="encrypted-text" name="encrypted-text" cols="18" rows="10" id="encrypted-text" readonly></textarea>
                 <img src="./images/Muñeco.png" alt="muñeco" id="img-message" />
                 <h2 class="subtitle" id="subtitle-paragraph">Ningún mensaje fue encontrado</h2>
-                <input class="text-encrypt" id="encrypted-text" type="text" readonly />
                 <p class="text-paragraph" id="message-paragraph">Ingresa el texto que desees encriptar o desencriptar.</p>
                 <button class="btn-copy" id="btn-copy">Copiar</button>
             </section>
@@ -46,7 +55,7 @@
                     <a href="https://github.com/Krlozces" target="_blank">
                         <img src="./images/github.png" alt="Github" width="30px">
                     </a> 
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/brayan-cespedes-184801185" target="_blank">
                         <img src="./images/linkedin.png" alt="Linkedin" width="30px">
                     </a>
                 </article>
