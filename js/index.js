@@ -55,13 +55,18 @@ encryptButton.addEventListener("click", () => {
     let text = textArea.value;
     if(!text){
         Swal.fire("Error", "No hay texto para encriptar", "error");
-    } else{
-        encryptedText.value = encrypt(text);
-        messageParagraph.style.display = "none";
-        subtitleParagraph.style.display = "none";
-        imgMessage.style.display = "none";
-        copyButton.style.display = "block";
-        encryptedText.style.display  ="block";
+    } else{ 
+        if(text.match(/[^a-z]/g)){
+            Swal.fire("Error", "No se pueden encriptar caracteres especiales ni mayúsculas.", "error");
+            textArea.value = "";
+        }else{
+            encryptedText.value = encrypt(text);
+            messageParagraph.style.display = "none";
+            subtitleParagraph.style.display = "none";
+            imgMessage.style.display = "none";
+            copyButton.style.display = "block";
+            encryptedText.style.display  ="block";
+        }
     }
 });
 
@@ -70,12 +75,17 @@ decryptButton.addEventListener("click", () => {
     if(!textEncrypted){
         Swal.fire("Error", "No hay texto para desencriptar", "error");
     }else{
-        encryptedText.value = desencrypt(textEncrypted);
-        messageParagraph.style.display = "none";
-        subtitleParagraph.style.display = "none";
-        imgMessage.style.display = "none";
-        encryptedText.style.display  ="block";
-        copyButton.style.display = "block";
+        if(textEncrypted.match(/[^a-z]/g)){
+            Swal.fire("Error", "No se pueden desencriptar caracteres especiales ni mayúsculas.", "error");
+            textArea.value = "";
+        }else{
+            encryptedText.value = desencrypt(textEncrypted);
+            messageParagraph.style.display = "none";
+            subtitleParagraph.style.display = "none";
+            imgMessage.style.display = "none";
+            encryptedText.style.display  ="block";
+            copyButton.style.display = "block";
+        }
     }
 });
 
