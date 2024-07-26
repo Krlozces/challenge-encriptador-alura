@@ -47,6 +47,7 @@ function copy() {
     copyText.setSelectionRange(0, 99999);
     navigator.clipboard.writeText(copyText.value);
     Swal.fire("Texto copiado: " + copyText.value);
+    encryptedText.value = "";
 }
 
 copyButton.addEventListener("click", () => copy());
@@ -56,7 +57,7 @@ encryptButton.addEventListener("click", () => {
     if(!text){
         Swal.fire("Error", "No hay texto para encriptar", "error");
     } else{ 
-        if(text.match(/[^a-z]/g)){
+        if(text.match(/[^a-z]\s/g)){
             Swal.fire("Error", "No se pueden encriptar caracteres especiales ni mayúsculas.", "error");
             textArea.value = "";
         }else{
@@ -75,7 +76,7 @@ decryptButton.addEventListener("click", () => {
     if(!textEncrypted){
         Swal.fire("Error", "No hay texto para desencriptar", "error");
     }else{
-        if(textEncrypted.match(/[^a-z]/g)){
+        if(textEncrypted.match(/[^a-z]]\s/g)){
             Swal.fire("Error", "No se pueden desencriptar caracteres especiales ni mayúsculas.", "error");
             textArea.value = "";
         }else{
