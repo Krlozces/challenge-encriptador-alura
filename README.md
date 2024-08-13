@@ -22,6 +22,7 @@ Ejemplo:
 
 🔓 Desencriptación
 |Entrada	|Salida|
+|---------|------|
 |enter	|e|
 |imes	|i|
 |ai	|a|
