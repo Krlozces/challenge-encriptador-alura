@@ -16,9 +16,9 @@
 |a	|ai|
 |o	|ober|
 |u	|ufat|
-Ejemplo:
 
-"gato" => "gaitober"
+Ejemplo:
+**Alias:** `gato` => `gaitober`
 
 🔓 Desencriptación
 |Entrada	|Salida|
@@ -28,6 +28,6 @@ Ejemplo:
 |ai	|a|
 |ober	|o|
 |ufat	|u|
-Ejemplo:
 
+Ejemplo:
 "gaitober" => "gato"
