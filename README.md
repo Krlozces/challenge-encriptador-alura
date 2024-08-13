@@ -9,23 +9,23 @@
 
 ## Funcionamiento
 🔒 Encriptación
-Entrada	Salida
-e	enter
-i	imes
-a	ai
-o	ober
-u	ufat
+|Entrada	|Salida|
+|e	|enter|
+|i	|imes|
+|a	|ai|
+|o	|ober|
+|u	|ufat|
 Ejemplo:
 
 "gato" => "gaitober"
 
 🔓 Desencriptación
-Entrada	Salida
-enter	e
-imes	i
-ai	a
-ober	o
-ufat	u
+|Entrada	|Salida|
+|enter	|e|
+|imes	|i|
+|ai	|a|
+|ober	|o|
+|ufat	|u|
 Ejemplo:
 
 "gaitober" => "gato"
