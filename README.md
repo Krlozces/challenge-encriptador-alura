@@ -18,7 +18,7 @@
 |u	|ufat|
 
 Ejemplo:
-**Alias:** `gato` => `gaitober`
+`gato` => `gaitober`
 
 🔓 Desencriptación
 |Entrada	|Salida|
