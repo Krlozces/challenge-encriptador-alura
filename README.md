@@ -10,6 +10,7 @@
 ## Funcionamiento
 🔒 Encriptación
 |Entrada	|Salida|
+|---------|------|
 |e	|enter|
 |i	|imes|
 |a	|ai|
