@@ -1,5 +1,5 @@
 # Challenge Encriptador / Alura Latam + Oracle
-
+![image](https://github.com/user-attachments/assets/c5641d1d-2b55-403c-894d-d837d1c246f3)
 ## Descripción
 
 ## Requerimientos
